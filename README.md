@@ -1,5 +1,7 @@
 # ScanEffect
 
+![](https://raw.githubusercontent.com/Czajnikowski/ScanEffect/main/scan-effect.gif)
+
 Everybody knows how a scanner works, right? Right... 😳?
 
 It's a bit complicated, but in the essence the process is:
