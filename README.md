@@ -17,9 +17,9 @@ Normally, image processing is handled by the GPU. The shader function gets taske
 
 1. You add `sceneEffect` modifier to your `View`
 2. For each line of the scan area the effect calculates content displacement based on supplied [`ScanEffectContentDisplacementCalculator`](https://github.com/Czajnikowski/ScanEffect/blob/main/Sources/ScanEffect/ScanEffectContentDisplacementCalculator.swift#L11-L32)
-3. The content gets displaced and stored
+3. The content gets displaced in the scan area and gets used to provide a line of content in the output image.
 
-As a consequence a [`scanArea.height` calls happen on the CPU](https://github.com/Czajnikowski/ScanEffect/blob/main/Sources/ScanEffect/ScanEffect.swift#L115-L128) to render a frame. Much? Not so much? Depends. It can become quite heavy if you want to render an animation, so be careful!
+As a consequence a [`scanArea.height` number of calls to `displacedContentPosition.calculate` happens on the CPU](https://github.com/Czajnikowski/ScanEffect/blob/main/Sources/ScanEffect/ScanEffect.swift#L115-L128) to render a frame. Much? Not so much? Depends. It can become quite heavy if you want to render an animation, so be careful!
 
 ## How do I integrate it?
 
