@@ -12,10 +12,10 @@ extension View {
   ///
   /// Have you ever played with scanner while its scanning? You can achieve funny effects by moving scanned content when the scan is in progress . `scanEffect` creates a container (*sensor area view*) that hosts a *content* (modified view). It allows to *displace* or move content while the scan is in progress using ``ScanEffectContentDisplacementCalculator``.
   ///
-  /// It also applies a chromatic aberration effect based on the amount of returned displacement that you can control with `rRelativeDisplacement`, `gRelativeDisplacement` and `bRelativeDisplacement`.
+  /// It also applies a chromatic aberration effect based on the amount of displacement that you can control with `rRelativeDisplacement`, `gRelativeDisplacement` and `bRelativeDisplacement`.
   ///
   /// - Parameters:
-  ///   - displacedContentPositionCalculator: a closure that gets calld to calculate content displacement for particular vertical sensor position. Check ``ScanEffectContentDisplacementCalculator`` for mode details.
+  ///   - displacedContentPositionCalculator: a closure that gets calld to calculate content displacement for particular vertical sensor position. Check ``ScanEffectContentDisplacementCalculator`` for more details.
   ///   - rRelativeDisplacement: adjusts the relative red channel displacement. To disable chromatic aberration effect provide `0`.
   ///   - gRelativeDisplacement: same but for green channel.
   ///   - bRelativeDisplacement: same but for blue channel.

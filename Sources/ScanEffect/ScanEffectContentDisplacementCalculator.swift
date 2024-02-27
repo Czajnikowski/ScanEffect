@@ -13,7 +13,6 @@ import SwiftUI
 /// The calculator wraps a closure that gets called by `scanEffect` to calculate content displacement for a scan sensor at particular vertical position. Be aware that the closure gets executed `sensorAreaSize.height` times per frame, so **avoid time intensive operations and side effects** (`print` included) in the body.
 ///
 /// To get an intuition and explore some possibilities please reffer to sample instances defined in `ScanEffectContentDisplacementCalculator+Functions.swift`
-///
 public struct ScanEffectContentDisplacementCalculator {
   public typealias Calculate = (
     _ sensorVerticalPosition: Float,
