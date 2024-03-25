@@ -22,7 +22,7 @@ public struct ScanEffectContentDisplacementCalculator {
   
   let calculate: Calculate
   
-  /// Initializes an instance by providing the ``Calculate`` closure.
+  /// Initializes an instance by providing the ``ScanEffectContentDisplacementCalculator/Calculate`` closure.
   ///
   /// - Parameter calculate: a closure that returns displacement for scan sensor at particular vertical position.
   public init(calculate: @escaping Calculate) {

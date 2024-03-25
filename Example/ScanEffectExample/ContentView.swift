@@ -10,6 +10,9 @@ import ScanEffect
 
 struct ContentView: View {
   @State private var startDate = Date.now
+  private func timeSinceStart(_ timelineContext: TimelineViewDefaultContext) -> Float {
+    Float(timelineContext.date.timeIntervalSince(startDate))
+  }
   
   var body: some View {
     TimelineView(.animation) { timelineContext in
@@ -47,10 +50,6 @@ struct ContentView: View {
     .onTapGesture {
       startDate = .now
     }
-  }
-  
-  private func timeSinceStart(_ timelineContext: TimelineViewDefaultContext) -> Float {
-    Float(timelineContext.date.timeIntervalSince(startDate))
   }
 }
 
